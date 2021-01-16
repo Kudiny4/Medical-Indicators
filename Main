@@ -2,11 +2,18 @@ name = input('Ваше имя:   ')
 surname = input('Ваша фамилия:   ')
 age = int(input('Ваш возраст:   '))
 weight = int(input('Ваш вес:   '))
-if age < 30 and 49 < weight < 121:
-    print(name, surname, ', ', age, 'год', ', ', weight, 'кг - Состояние хорошее')
-elif 30 < age <= 40 and (weight < 50 or weight > 120):
-    print(name, surname, ', ', age, 'год', ', ', weight, 'кг - Либо ты дохляк, либо жирба! Займись собой!')
-elif age > 40 and (weight < 50 or weight > 120):
-    print(name, surname, ', ', age, 'год', ', ', weight, 'кг - Это уже подозрительно. Обратись к врачу!')
+tabl = [2, 3, 4]
+if age % 10 == 1:
+    decl = 'год'
+elif age % 10 in tabl:
+    decl = 'года'
 else:
-    print('Ты красавчик! Так держать!')
+    decl = 'лет'
+if age < 30 and 49 < weight < 121:
+    print(name, surname, ', ', age, decl, ', ', weight, 'кг - Состояние хорошее')
+elif 30 < age <= 40 and (weight < 50 or weight > 120):
+    print(name, surname, ', ', age, decl, ', ', weight, 'кг - Либо ты дохляк, либо жирба! Займись собой!')
+elif age > 40 and (weight < 50 or weight > 120):
+    print(name, surname, ', ', age, decl, ', ', weight, 'кг - Это уже подозрительно. Обратись к врачу!')
+else:
+    print(name, surname, ', ', age, decl, ', ', weight, 'кг - Ты красавчик! Так держать!')
