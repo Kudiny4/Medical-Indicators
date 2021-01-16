@@ -1,9 +1,15 @@
 name = input('Ваше имя:   ')
 surname = input('Ваша фамилия:   ')
 age = int(input('Ваш возраст:   '))
+while age < 1 or age > 100:
+    print('Столько не живут! Введи реальный возраст!')
+    age = int(input('Итак, ваш настоящий возраст:   '))
+    break
 weight = int(input('Ваш вес:   '))
 tabl = [2, 3, 4]
-if age % 10 == 1:
+if age == 11:
+    decl = 'лет'
+elif age % 10 == 1:
     decl = 'год'
 elif age % 10 in tabl:
     decl = 'года'
